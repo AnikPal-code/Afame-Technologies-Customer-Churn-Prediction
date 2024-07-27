@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Customer Churn Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <div class="form-group">
+                <label for="CreditScore">Credit Score:</label>
+                <input type="number" name="CreditScore" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="number" name="Age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Tenure">Tenure:</label>
+                <input type="number" name="Tenure" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Balance">Balance:</label>
+                <input type="number" name="Balance" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="NumOfProducts">Number of Products:</label>
+                <input type="number" name="NumOfProducts" required>
+            </div>
+
+            <div class="form-group">
+                <label for="HasCrCard">Has Credit Card:</label>
+                <select name="HasCrCard" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="IsActiveMember">Is Active Member:</label>
+                <select name="IsActiveMember" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="EstimatedSalary">Estimated Salary:</label>
+                <input type="number" name="EstimatedSalary" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Geography">Geography:</label>
+                <select name="Geography" required>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_message %}
+            <h3>{{ prediction_message }}</h3>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

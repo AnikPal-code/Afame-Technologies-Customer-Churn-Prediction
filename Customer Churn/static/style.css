@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(36, 160, 36);
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    color: white;
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Styles */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #c32f2f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: #fff; /* White text color */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Focus Styles for Input */
+input:focus {
+    border-color: #28a745; /* Green border on focus */
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly less transparent background on focus */
+}
+
+/* Valid Input Styles */
+input:valid {
+    border-width: 3px;
+    border-color: #28a745; /* Maintain green border if input is valid */
+}
+
+/* Invalid Input Styles */
+input:invalid {
+    border-width: 3px;
+    border-color: #c32f2f; /* Maintain original red border if input is invalid */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a7286c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cd53d3;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.form-group select {
+    width: 100px;
+    padding: 8px;
+    border: 2px solid #c32f2f; /* Default red border */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: #fff; /* White text color */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+    transition: border-color 0.3s; 
+    box-sizing: border-box;
+}
+
+/* Focus Styles for Select */
+.form-group select:focus {
+    outline: none;
+}
+
+/* Select Option Styles */
+.form-group select option {
+    color: black; /* Black text color for options */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        padding: 6px;
+    }
+}
